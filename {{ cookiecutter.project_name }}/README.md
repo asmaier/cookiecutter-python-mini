@@ -4,17 +4,17 @@
 
 ## Setup project
 
-    $ poetry install
+    $ uv sync
 
 ## Start example app
 
-    $ poetry run python src/{{ cookiecutter.project_slug }}/main.py
+    $ uv run python src/{{ cookiecutter.project_slug }}/main.py
 
 ## Run linter and tests
 
-    $ poetry run ruff check
-    $ poetry run pytest -s
+    $ uv run ruff check
+    $ uv run pytest -s
 
 ## Teardown project
 
-    $ poetry env remove --all
+    $ rm -r .venv uv.lock

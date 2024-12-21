@@ -3,23 +3,23 @@
 This is a Cookiecutter template that can be used to initiate a minimal Python project with a minimal set of tools for development
 and testing. It supports the following features:
 
-- [Poetry](https://python-poetry.org/) for dependency management
+- [uv](https://docs.astral.sh/uv/) for dependency management
 - Code quality with [ruff](https://github.com/charliermarsh/ruff)
 - Testing with [pytest](https://docs.pytest.org/)
 
 ## Quickstart
 
-First you need to install poetry and cookiecutter:
+First you need to install uv and cookiecutter:
 
 ### Linux, Windows
 
     $ pip install pipx
-    $ pipx install poetry cookiecutter
+    $ pipx install uv cookiecutter
 
 
 ### Homebrew on Mac OS X
 
-    $ brew install poetry cookiecutter
+    $ brew install uv cookiecutter
 
 
 Then navigate to the directory in which you want to
@@ -54,7 +54,7 @@ Just change into the newly
 created directory and install the dependencies
 
     $ cd <project_name>
-    $ poetry install
+    $ uv sync
 
 You are now ready to start developing.
 
