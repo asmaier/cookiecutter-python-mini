@@ -1,6 +1,7 @@
 {
     "project_name": "Python Project",
-    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-').replace('_', '-') }}",
+    "project_package_name": "{{ cookiecutter.project_slug.replace('-', '_') }}",
     "project_description": "This is a python project.",
     "author": "Anonymous",
     "email": "anonymous@example.com"
