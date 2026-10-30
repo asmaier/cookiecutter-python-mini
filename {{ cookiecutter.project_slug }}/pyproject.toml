@@ -1,14 +1,17 @@
 [project]
-name = "{{cookiecutter.project_slug}}"
+name = "{{ cookiecutter.project_slug }}"
 version = "0.1.0"
-description = "{{cookiecutter.project_description}}"
+description = "{{ cookiecutter.project_description }}"
 authors = [
-    { name = "{{cookiecutter.author}}", email = "{{cookiecutter.email}}" }
+    { name = "{{ cookiecutter.author }}", email = "{{ cookiecutter.email }}" }
 ]
 readme = "README.md"
 
 requires-python = ">=3.12"
 dependencies = []
+
+[project.scripts]
+{{ cookiecutter.project_slug }} = "{{ cookiecutter.project_package_name }}.main:cli"
 
 [dependency-groups]
 dev = [
@@ -21,9 +24,8 @@ target-version = "py312"
 line-length = 120
 
 [tool.ruff.lint]
-extend-select = ["E", "F"]
+extend-select = ["E", "F", "I", "UP", "B"]
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
-
